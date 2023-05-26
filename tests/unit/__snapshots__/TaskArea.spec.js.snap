@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Organism TaskArea Component Correct layout 1`] = `
+<div class="taskArea">
+  <div class="add"><input type="text" placeholder="Add new task"></div>
+</div>
+`;
+
+exports[`TaskArea.vue Correct layout 1`] = `
+<div class="taskArea">
+  <div class="add"><input type="text" placeholder="Add new task"></div>
+</div>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atom DeleteButton Component Correct layout 1`] = `<button class="delete">×</button>`;
+
+exports[`Atom DeleteButton Component Correct layuot 1`] = `<button class="delete">×</button>`;
+
+exports[`DeleteButton.vue is on click 1`] = `<button class="delete">×</button>`;

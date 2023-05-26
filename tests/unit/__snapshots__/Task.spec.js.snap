@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecule Task Component Correct checked layout 1`] = `
+<div
+  class="todo"
+>
+  <label>
+    <input
+      class="checkbox"
+      type="checkbox"
+    />
+     
+    <span
+      class="fake"
+    />
+  </label>
+   
+  <span
+    class="task"
+  >
+    Test Title
+  </span>
+   
+  <button
+    class="delete"
+  >
+    ×
+  </button>
+</div>
+`;
+
+exports[`Molecule Task Component Correct layout 1`] = `
+<div
+  class="todo"
+>
+  <label>
+    <input
+      class="checkbox"
+      type="checkbox"
+    />
+     
+    <span
+      class="fake"
+    />
+  </label>
+   
+  <span
+    class="task"
+  >
+    Test Title
+  </span>
+   
+  <button
+    class="delete"
+  >
+    ×
+  </button>
+</div>
+`;
+
+exports[`Molecule Task Component Correct unchecked layout 1`] = `
+<div
+  class="todo"
+>
+  <label>
+    <input
+      class="checkbox"
+      type="checkbox"
+    />
+     
+    <span
+      class="fake"
+    />
+  </label>
+   
+  <span
+    class="task"
+  >
+    Test Title
+  </span>
+   
+  <button
+    class="delete"
+  >
+    ×
+  </button>
+</div>
+`;

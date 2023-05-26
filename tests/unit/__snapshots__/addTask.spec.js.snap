@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTask.vue has input 1`] = `<div class="add"><input type="text" placeholder="Add new task"></div>`;
+
+exports[`Atom AddTask Component correct layout 1`] = `<div class="add"><input type="text" placeholder="Add new task"></div>`;
+
+exports[`Atom AddTask Component has input 1`] = `<div class="add"><input type="text" placeholder="Add new task"></div>`;

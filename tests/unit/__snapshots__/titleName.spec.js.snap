@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Atom TitleName Component Correct layout 1`] = `<header><h1 class="title">to do list</h1></header>`;
+
+exports[`Atom TitleName Component has name 1`] = `<header><h1 class="title">to do list</h1></header>`;
+
+exports[`TitleName.vue has name 1`] = `<header><h1 class="title">to do list</h1></header>`;
