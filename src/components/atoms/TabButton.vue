@@ -2,7 +2,6 @@
   <button
     :class="[$style.tab, { [$style.active]: isActive }]"
     @click="$emit('click')"
-    data-cy="tab__title"
   >
     {{ title }}
   </button>

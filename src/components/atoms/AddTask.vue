@@ -1,24 +1,69 @@
+<!-- eslint-disable vue/no-mutating-props -->
+<!-- eslint-disable vue/no-mutating-props -->
 <template>
   <div :class="$style.add">
     <input
       type="text"
       placeholder="Add new task"
       @keyup.enter="clearInput"
-      v-model="value"
+      v-model="newTask"
+      :disabled="isDisabled"
+      :required="isRequired"
+      @focus="isFocused = true"
+      @blur="isFocused = false"
     />
+    <div v-if="isError" class="error-message">{{ errorMessage }}</div>
+    <div v-if="isSuccess" class="success-message">{{ successMessage }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "AddTask",
-  props: {
-    value: "",
+  data() {
+    return {
+      newTask: "",
+      maxCharacters: 50,
+      isDisabled: false,
+      isRequired: true,
+      isFocused: false,
+      isError: false,
+      isSuccess: false,
+      errorMessage: "",
+      successMessage: "",
+    };
   },
+  name: "AddTask",
+  // props: {
+  //   // eslint-disable-next-line vue/require-prop-type-constructor
+  //   value: "",
+  // },
   methods: {
     clearInput() {
-      this.$emit("keyup", this.value);
-      this.value = "";
+      const profanityRegex = /damn|shit|idiot|asshole/i;
+      if (this.newTask.trim() === "") {
+        this.isError = true;
+        this.errorMessage = "Task is empty";
+        this.isSuccess = false;
+      } else if (this.newTask.length > this.maxCharacters) {
+        this.isError = true;
+        this.errorMessage = `Task cannot exceed ${this.maxCharacters} characters`;
+        this.isSuccess = false;
+      } else if (profanityRegex.test(this.newTask)) {
+        this.isError = true;
+        this.errorMessage = "Todo cannot contain profanity";
+        this.isSuccess = false;
+      } else {
+        this.isError = false;
+        this.errorMessage = "";
+        this.isSuccess = true;
+        this.successMessage = "Task added successfully";
+        this.$emit("keyup", this.newTask);
+        // eslint-disable-next-line vue/no-mutating-props
+        this.newTask = "";
+      }
+      // this.$emit("keyup", this.value);
+      // // eslint-disable-next-line vue/no-mutating-props
+      // this.value = "";
     },
   },
 };
@@ -26,7 +71,7 @@ export default {
 
 <style lang="scss" module>
 .add {
-  font-family: "Inter";
+  font-family: "Times New Roman", Times, serif;
   padding: 0.688rem 0;
   border-radius: 0.625rem;
   display: flex;

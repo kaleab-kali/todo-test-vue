@@ -1,7 +1,5 @@
 <template>
-  <button :class="$style.delete" data-cy="delete" @click="$emit('click')">
-    &times;
-  </button>
+  <button :class="$style.delete" @click="$emit('click')">&times;</button>
 </template>
 
 <script>

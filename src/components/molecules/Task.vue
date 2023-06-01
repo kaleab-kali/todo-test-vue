@@ -1,12 +1,11 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>
     <div :class="$style.todo">
       <Checkbox @click="$emit('changes')" :isChecked="isChecked" />
-      <span
-        :class="[$style.task, { [$style.done]: isChecked }]"
-        data-cy="task__title"
-        >{{ title }}</span
-      >
+      <span :class="[$style.task, { [$style.done]: isChecked }]">{{
+        title
+      }}</span>
       <DeleteButton @click="$emit('delete')" />
     </div>
   </div>

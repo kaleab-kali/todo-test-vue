@@ -6,7 +6,7 @@
       :checked="isChecked"
       @click="$emit('click')"
     />
-    <span :class="$style.fake" data-cy="fake__checkbox" />
+    <span :class="$style.fake" />
   </label>
 </template>
 
@@ -14,6 +14,7 @@
 export default {
   props: {
     isChecked: Boolean,
+    // eslint-disable-next-line vue/require-prop-type-constructor
     default: false,
   },
 };

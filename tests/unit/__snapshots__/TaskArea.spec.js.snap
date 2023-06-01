@@ -2,12 +2,16 @@
 
 exports[`Organism TaskArea Component Correct layout 1`] = `
 <div class="taskArea">
-  <div class="add"><input type="text" placeholder="Add new task"></div>
-</div>
-`;
-
-exports[`TaskArea.vue Correct layout 1`] = `
-<div class="taskArea">
-  <div class="add"><input type="text" placeholder="Add new task"></div>
+  <div data-cy="notasks" class="empty">
+    The task list is empty! <br>
+    Add a new task!
+  </div>
+  <div class="tasksContent">
+    <transition-group-stub></transition-group-stub>
+  </div>
+  <div class="add"><input type="text" placeholder="Add new task" required="required">
+    <!---->
+    <!---->
+  </div>
 </div>
 `;
